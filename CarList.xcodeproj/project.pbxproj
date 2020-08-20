@@ -13,6 +13,14 @@
 		C1D3363E24EF10C100574F19 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3363B24EF10C100574F19 /* HomeViewController.swift */; };
 		C1D3363F24EF10C100574F19 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3363C24EF10C100574F19 /* HomeModel.swift */; };
 		C1D3364024EF10C100574F19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3363D24EF10C100574F19 /* HomeView.swift */; };
+		C1D3364824EF11B700574F19 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3364224EF11B700574F19 /* UIView+.swift */; };
+		C1D3364924EF11B700574F19 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3364324EF11B700574F19 /* UIViewController+.swift */; };
+		C1D3364A24EF11B700574F19 /* URL+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3364424EF11B700574F19 /* URL+.swift */; };
+		C1D3364B24EF11B700574F19 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3364524EF11B700574F19 /* UIFont+.swift */; };
+		C1D3364C24EF11B700574F19 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3364624EF11B700574F19 /* UIColor+.swift */; };
+		C1D3364D24EF11B700574F19 /* URLSession+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3364724EF11B700574F19 /* URLSession+.swift */; };
+		C1D3365024EF122700574F19 /* HelperNetworkservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3364F24EF122700574F19 /* HelperNetworkservice.swift */; };
+		C1D3365324EF125800574F19 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3365224EF125800574F19 /* ModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		C1D3363B24EF10C100574F19 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C1D3363C24EF10C100574F19 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		C1D3363D24EF10C100574F19 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C1D3364224EF11B700574F19 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		C1D3364324EF11B700574F19 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		C1D3364424EF11B700574F19 /* URL+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+.swift"; sourceTree = "<group>"; };
+		C1D3364524EF11B700574F19 /* UIFont+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		C1D3364624EF11B700574F19 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		C1D3364724EF11B700574F19 /* URLSession+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+.swift"; sourceTree = "<group>"; };
+		C1D3364F24EF122700574F19 /* HelperNetworkservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperNetworkservice.swift; sourceTree = "<group>"; };
+		C1D3365224EF125800574F19 /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,9 @@
 		C1D3362524EF0F6300574F19 /* CarList */ = {
 			isa = PBXGroup;
 			children = (
+				C1D3365124EF124200574F19 /* Protocol */,
+				C1D3364E24EF121200574F19 /* Helper */,
+				C1D3364124EF118900574F19 /* Extension */,
 				C1D3363A24EF108A00574F19 /* Home */,
 				C1D3362624EF0F6300574F19 /* AppDelegate.swift */,
 				C1D3362F24EF0F6400574F19 /* Assets.xcassets */,
@@ -73,6 +92,35 @@
 				C1D3363B24EF10C100574F19 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C1D3364124EF118900574F19 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C1D3364624EF11B700574F19 /* UIColor+.swift */,
+				C1D3364524EF11B700574F19 /* UIFont+.swift */,
+				C1D3364224EF11B700574F19 /* UIView+.swift */,
+				C1D3364324EF11B700574F19 /* UIViewController+.swift */,
+				C1D3364424EF11B700574F19 /* URL+.swift */,
+				C1D3364724EF11B700574F19 /* URLSession+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C1D3364E24EF121200574F19 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C1D3364F24EF122700574F19 /* HelperNetworkservice.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		C1D3365124EF124200574F19 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C1D3365224EF125800574F19 /* ModelProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,10 +193,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1D3364B24EF11B700574F19 /* UIFont+.swift in Sources */,
+				C1D3365324EF125800574F19 /* ModelProtocol.swift in Sources */,
 				C1D3362724EF0F6300574F19 /* AppDelegate.swift in Sources */,
+				C1D3365024EF122700574F19 /* HelperNetworkservice.swift in Sources */,
 				C1D3364024EF10C100574F19 /* HomeView.swift in Sources */,
+				C1D3364A24EF11B700574F19 /* URL+.swift in Sources */,
+				C1D3364D24EF11B700574F19 /* URLSession+.swift in Sources */,
+				C1D3364924EF11B700574F19 /* UIViewController+.swift in Sources */,
 				C1D3363E24EF10C100574F19 /* HomeViewController.swift in Sources */,
 				C1D3363F24EF10C100574F19 /* HomeModel.swift in Sources */,
+				C1D3364824EF11B700574F19 /* UIView+.swift in Sources */,
+				C1D3364C24EF11B700574F19 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
