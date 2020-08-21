@@ -95,7 +95,7 @@ class HelperNetworkService {
                        completion(.failure(.decodeErrorValueNA))
                    } catch let DecodingError.typeMismatch(type, context)  {
                        print("Type '\(type)' mismatch:", context.debugDescription)
-                        // print("codingPath:", context.codingPath)
+                        print("codingPath:", context.codingPath)
                        completion(.failure(.decodeErrorTypeNA))
                    } catch {
                        print("error: ", error)

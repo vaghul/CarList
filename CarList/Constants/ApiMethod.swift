@@ -1,5 +1,5 @@
 //
-//  HomeModel.swift
+//  ApiMethod.swift
 //  CarList
 //
 //  Created by Vaghula Krishnan on 2020-08-20.
@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+// Possible Api method Used for Internal reference handelling
+
+public enum ApiMethod: String {
+    case CarList
+}
+
+

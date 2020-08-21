@@ -13,10 +13,10 @@ extension UIFont {
     // used for universal font styling and easy reference
     
     class var semiboldTitle: UIFont {
-        return UIFont.systemFont(ofSize: 12, weight: .semibold)
+        return UIFont.systemFont(ofSize: 18, weight: .semibold)
     }
     
     class var mediumSubTitle: UIFont {
-        return UIFont.systemFont(ofSize: 16, weight: .medium)
+        return UIFont.systemFont(ofSize: 14, weight: .medium)
     }
 }
