@@ -19,11 +19,6 @@ class ConstantString {
     // place holder can be replaced by localized string to add multilanguage support in future
     
     let PLACEHOLDERHOMETITLE = "Car Listing"
-    let PLACEHOLDERNAME = "Name"
-    let PLACEHOLDERPHONE = "Phone"
-    let PLACEHOLDEREMAIL = "Email"
-    let PLACEHOLDERTEAM = "Team"
-    let PLACEHOLDERBIO = "Bio"
     
     let PLACEHOLDEREMPTYDIRECTORY = "Empty Directory"
     let PLACEHOLDERERRORMESSAGE = "Error Occured"

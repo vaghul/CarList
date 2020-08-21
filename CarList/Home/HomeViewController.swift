@@ -24,6 +24,7 @@ class HomeViewController: UITableViewController {
         //self.tableView.rowHeight = 350
         navigationItem.title = ConstantString.shared.PLACEHOLDERHOMETITLE
         tableView.separatorColor = .separator
+        tableView.decelerationRate = .fast
         startloading()
 
         
@@ -49,6 +50,8 @@ class HomeViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: ConstantString.shared.CARLISTCELL, for: indexPath) as! CarListTableViewCell
         cell.selectionStyle = .none
         cell.clipsToBounds = true
+        cell.indexPath = indexPath
+        cell.delegate = self
         if let listing = viewModel.getListing(for: indexPath) {
             cell.setCellValue(listing: listing)
             cell.imageviewListing.image = StaticImages.shared.PLACEHOLDERUSER
@@ -102,4 +105,20 @@ extension HomeViewController : ModelDelegate {
         self.present(alert, animated: true, completion: nil)
     }
     
+}
+
+
+extension HomeViewController: CarListTableViewCellDelegate {
+    func onClickCall(indexPath:IndexPath) {
+        if let listing = viewModel.getListing(for: indexPath), let phone = listing.dealer.phone,let url = URL(string: "tel://\(phone)") {
+            let alert = UIAlertController(title: nil, message:"Call " + phone, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            alert.addAction(UIAlertAction(title: "Call", style: .default, handler: { (UIAlertAction) in
+                UIApplication.shared.open(url)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 }

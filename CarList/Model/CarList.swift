@@ -23,6 +23,37 @@ struct CarListData:Codable {
     var mileage:Double?
     var dealer:CarListDealer
     
+    func getListingTitle() -> String {
+        var heading:[String] = []
+        if let year = self.year {
+            heading.append("\(year)")
+        }
+        if let make = self.make {
+            heading.append(make)
+        }
+        if let model = self.model {
+            heading.append(model)
+        }
+        if let trim = self.trim, trim != "Unspecified" {
+            heading.append("- \(trim)")
+        }
+        return heading.joined(separator: " ")
+    }
+    
+    func getListingLocation() -> String? {
+        var location = ""
+        if let city = self.dealer.city {
+             if let state = self.dealer.state {
+                 location = "\(city), \(state)"
+             }else{
+                 location = "\(city)"
+             }
+         }else if let state = self.dealer.state {
+                 location = "\(state)"
+         }
+        return (location != "") ? location : nil
+    }
+    
 }
 
 struct CarListDataFirstImage:Codable {

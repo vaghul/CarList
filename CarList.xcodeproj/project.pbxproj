@@ -28,6 +28,7 @@
 		C1D3366224EF15C200574F19 /* CarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3366124EF15C200574F19 /* CarList.swift */; };
 		C1D3366524EF183000574F19 /* CarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3366424EF183000574F19 /* CarListTableViewCell.swift */; };
 		C1D3366824EF393600574F19 /* ViewMultiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3366724EF393600574F19 /* ViewMultiLabel.swift */; };
+		C1D3366A24EF486E00574F19 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D3366924EF486E00574F19 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		C1D3366124EF15C200574F19 /* CarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarList.swift; sourceTree = "<group>"; };
 		C1D3366424EF183000574F19 /* CarListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListTableViewCell.swift; sourceTree = "<group>"; };
 		C1D3366724EF393600574F19 /* ViewMultiLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMultiLabel.swift; sourceTree = "<group>"; };
+		C1D3366924EF486E00574F19 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				C1D3364324EF11B700574F19 /* UIViewController+.swift */,
 				C1D3364424EF11B700574F19 /* URL+.swift */,
 				C1D3364724EF11B700574F19 /* URLSession+.swift */,
+				C1D3366924EF486E00574F19 /* String+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				C1D3365324EF125800574F19 /* ModelProtocol.swift in Sources */,
 				C1D3362724EF0F6300574F19 /* AppDelegate.swift in Sources */,
 				C1D3365A24EF138400574F19 /* StaticImages.swift in Sources */,
+				C1D3366A24EF486E00574F19 /* String+.swift in Sources */,
 				C1D3365024EF122700574F19 /* HelperNetworkservice.swift in Sources */,
 				C1D3365C24EF138400574F19 /* ApiMethod.swift in Sources */,
 				C1D3366824EF393600574F19 /* ViewMultiLabel.swift in Sources */,

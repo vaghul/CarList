@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CarListTableViewCellDelegate:class {
-    func onClickCall(index:Int)
+    func onClickCall(indexPath:IndexPath)
 }
 
 class CarListTableViewCell: UITableViewCell {
@@ -103,36 +103,38 @@ class CarListTableViewCell: UITableViewCell {
         buttonCall.heightAnchor.constraint(equalToConstant: 20).isActive = true
         buttonCall.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
         
-        
+        buttonCall.addTarget(self, action: #selector(onClickCall), for: .touchUpInside)
         
     }
     
+    @objc func onClickCall(){
+        delegate?.onClickCall(indexPath: indexPath)
+    }
+    
     func setCellValue(listing: CarListData) {
-        labelListHeading.text = "\(listing.year ?? 0) \(listing.make ?? "") \(listing.model ?? "") \(listing.trim ?? "")"
+        
+        labelListHeading.text = listing.getListingTitle()
         viewListPrice.isHidden = true
         viewListMiles.isHidden = true
         viewListLocation.isHidden = true
-        
+        buttonCall.isHidden = true
         if let price = listing.listPrice {
             viewListPrice.isHidden = false
-            viewListPrice.setViewElement(title: "$\(price)", type: .price)
+            viewListPrice.setViewElement(title: price.getCurrency(), type: .price)
         }
         if let miles = listing.mileage {
             viewListMiles.isHidden = false
             viewListMiles.setViewElement(title: "\(miles) MI", type: .miles)
         }
-        if let city = listing.dealer.city {
+        if let location = listing.getListingLocation(){
             viewListLocation.isHidden = false
-            if let state = listing.dealer.state {
-                viewListLocation.setViewElement(title: "\(city), \(state)", type: .location)
-            }else{
-                viewListLocation.setViewElement(title: "\(city)", type: .location)
-            }
-        }else if let state = listing.dealer.state {
-                viewListLocation.setViewElement(title: "\(state)", type: .location)
+            viewListLocation.setViewElement(title: "\(location)", type: .location)
         }
-       
-        buttonCall.setTitle(listing.dealer.phone, for: .normal)
+        
+        if let phone = listing.dealer.phone {
+            buttonCall.isHidden = false
+            buttonCall.setTitle(phone.toPhoneNumber(), for: .normal)
+        }
     }
     
     func imageWithImage(image:UIImage){
