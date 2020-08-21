@@ -19,7 +19,7 @@ class CarListTableViewCell: UITableViewCell {
 
     var imageviewListing:UIImageView = {
         let temp = UIImageView()
-        temp.backgroundColor = .white
+        temp.backgroundColor = .appBackgroundColor
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.contentMode = .scaleAspectFill
         return temp
@@ -27,10 +27,9 @@ class CarListTableViewCell: UITableViewCell {
 
     var labelListHeading:UILabel = {
         let temp = UILabel()
-        temp.text = "test"
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.backgroundColor = .white
-        temp.textColor = .black
+        temp.backgroundColor = .appBackgroundColor
+        temp.textColor = .label
         temp.font = .semiboldTitle
         return temp
     }()
@@ -53,10 +52,17 @@ class CarListTableViewCell: UITableViewCell {
     var buttonCall:UIButton = {
         let temp = UIButton()
         temp.setTitleColor(.systemBlue, for: .normal)
-        temp.setTitleColor(.white, for: .highlighted)
+        temp.setTitleColor(.appBackgroundColor, for: .highlighted)
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.backgroundColor = .white
+        temp.backgroundColor = .appBackgroundColor
         temp.titleLabel?.font = .mediumSubTitle
+        return temp
+    }()
+    
+    var lineSeperator:UIView = {
+       let temp = UIView()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.backgroundColor = .seperatorColor
         return temp
     }()
     
@@ -77,7 +83,7 @@ class CarListTableViewCell: UITableViewCell {
         contentView.addSubview(imageviewListing)
         
         imageviewListing.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15).isActive = true
-        imageviewListing.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
+        imageviewListing.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20).isActive = true
         imageviewListing.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15).isActive = true
         imageviewListing.makeRoundedEdges(radius: 20)
 
@@ -102,6 +108,13 @@ class CarListTableViewCell: UITableViewCell {
         buttonCall.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
         buttonCall.heightAnchor.constraint(equalToConstant: 20).isActive = true
         buttonCall.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10).isActive = true
+        
+        contentView.addSubview(lineSeperator)
+
+        lineSeperator.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20).isActive = true
+        lineSeperator.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20).isActive = true
+        lineSeperator.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        lineSeperator.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -1).isActive  = true
         
         buttonCall.addTarget(self, action: #selector(onClickCall), for: .touchUpInside)
         

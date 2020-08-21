@@ -12,8 +12,12 @@ extension UIColor {
 
     // Used for custom colors ( using as stale since dark mode based colors are used)
     
-    class var lightGreyText: UIColor {
-        return UIColor(hex: "#7B8D93")!
+    class var seperatorColor: UIColor {
+        return UIColor(named: "seperatorColor")!
+    }
+    
+    class var appBackgroundColor: UIColor {
+        return UIColor(named: "BackgroundColor")!
     }
 
     public convenience init?(hex: String) {

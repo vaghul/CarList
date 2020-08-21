@@ -23,13 +23,14 @@ class HomeViewController: UITableViewController {
         registerTableView()
         //self.tableView.rowHeight = 350
         navigationItem.title = ConstantString.shared.PLACEHOLDERHOMETITLE
-        tableView.separatorColor = .separator
+        tableView.separatorStyle = .none
         tableView.decelerationRate = .fast
         startloading()
 
         
     }
     
+
     private func registerTableView() {
         self.tableView.register(CarListTableViewCell.self, forCellReuseIdentifier: ConstantString.shared.CARLISTCELL)
     }
